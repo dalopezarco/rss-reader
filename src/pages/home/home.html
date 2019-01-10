@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let article of (news | async)">
+  <ion-card *ngFor="let article of (articles | async)">
     <ion-card-header> {{ article.title }} </ion-card-header>
     <ion-card-content> {{ article.description }} </ion-card-content>
   </ion-card>

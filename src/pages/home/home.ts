@@ -10,11 +10,11 @@ import { article } from '../../models/article.models';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  news: Observable<article[]>;
+  articles: Observable<article[]>;
   constructor(public navCtrl: NavController, private newsProvider: NewsProvider) {}
 
   ionViewDidEnter() {
-    this.news = this.newsProvider.getNews();
-    this.news.subscribe(console.log);
+    this.articles = this.newsProvider.getNews();
+    this.articles.subscribe(console.log);
   }
 }
