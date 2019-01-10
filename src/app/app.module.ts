@@ -9,6 +9,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { NewsProvider } from '../providers/news/news';
 import { HttpInterceptorProvider } from '../providers/http-interceptor/http-interceptor';
+import { StorageProvider } from '../providers/storage/storage';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @NgModule({
   declarations: [MyApp],
@@ -25,7 +27,9 @@ import { HttpInterceptorProvider } from '../providers/http-interceptor/http-inte
       provide: HTTP_INTERCEPTORS,
       useExisting: HttpInterceptorProvider,
       multi: true
-    }
+    },
+    StorageProvider,
+    NativeStorage
   ]
 })
 export class AppModule {}
