@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar> <ion-title>Detalle del Artículo</ion-title> </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{ article.title }}</h1>
+  <img [src]="article.enclosure.link" />
+  <div [innerHTML]="article.content"></div>
+  <a ion-button block [href]="article.link">Ver en el navegador</a>
+</ion-content>

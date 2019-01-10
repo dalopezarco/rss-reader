@@ -17,4 +17,9 @@ export class HomePage {
     this.articles = this.newsProvider.getNews();
     this.articles.subscribe(console.log);
   }
+
+  goArticleDetail(article: Article) {
+    console.log('test');
+    this.navCtrl.push('ArticleDetailPage', { article });
+  }
 }

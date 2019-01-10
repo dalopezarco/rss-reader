@@ -12,4 +12,5 @@ export interface Article {
   pubDate: string;
   thumbnail: string;
   title: string;
+  content: string;
 }
