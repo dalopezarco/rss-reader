@@ -1,5 +1,14 @@
 <ion-card>
   <img [src]="article.enclosure.link" />
   <ion-card-header> {{ article.title }} </ion-card-header>
-  <ion-card-content> {{ article.description }} </ion-card-content>
+  <ion-card-content
+    style="
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 3em;"
+  >
+    {{ article.description }}
+  </ion-card-content>
 </ion-card>
