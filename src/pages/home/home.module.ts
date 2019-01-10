@@ -6,4 +6,4 @@ import { IonicPageModule } from 'ionic-angular';
   declarations: [HomePage],
   imports: [IonicPageModule.forChild(HomePage)]
 })
-export class ANewDetailPageModule {}
+export class HomePageModule {}

@@ -1,5 +1,5 @@
-import { aNew } from './aNew.models';
-export interface newsResponse {
+import { article } from './article.models';
+export interface articlesResponse {
   status: 'ok';
   feed: {
     url: string;
@@ -9,5 +9,5 @@ export interface newsResponse {
     description: string;
     image: string;
   };
-  items: aNew[];
+  items: article[];
 }

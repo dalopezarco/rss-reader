@@ -1,4 +1,4 @@
-export interface aNew {
+export interface article {
   author: string;
   categories: string[];
   description: string;

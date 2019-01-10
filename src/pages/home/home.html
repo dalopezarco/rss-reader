@@ -3,8 +3,8 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let aNew of (news | async)">
-    <ion-card-header> {{ aNew.title }} </ion-card-header>
-    <ion-card-content> {{ aNew.description }} </ion-card-content>
+  <ion-card *ngFor="let article of (news | async)">
+    <ion-card-header> {{ article.title }} </ion-card-header>
+    <ion-card-content> {{ article.description }} </ion-card-content>
   </ion-card>
 </ion-content>
