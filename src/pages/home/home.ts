@@ -15,7 +15,6 @@ export class HomePage {
 
   ionViewDidEnter() {
     this.articles = this.newsProvider.getNews();
-    this.articles.subscribe(console.log);
   }
 
   goArticleDetail(article: Article) {
