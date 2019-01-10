@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs/Observable';
-import { article } from '../../models/article.models';
+import { Article } from '../../models/article.models';
 import { articlesResponse } from '../../models/articlesResponse.models';
 
 @Injectable()
@@ -14,7 +14,7 @@ export class NewsProvider {
     return this.http.get(newsUrl).pipe(map((res: articlesResponse) => res.items.sort(this.compareDates)));
   }
 
-  compareDates(articleA: article, articleB: article) {
+  compareDates(articleA: Article, articleB: Article) {
     let dateA = new Date(articleA.pubDate).getTime();
     let dateB = new Date(articleB.pubDate).getTime();
     return dateB - dateA;

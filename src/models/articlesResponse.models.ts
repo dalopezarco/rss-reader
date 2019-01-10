@@ -1,4 +1,4 @@
-import { article } from './article.models';
+import { Article } from './article.models';
 export interface articlesResponse {
   status: 'ok';
   feed: {
@@ -9,5 +9,5 @@ export interface articlesResponse {
     description: string;
     image: string;
   };
-  items: article[];
+  items: Article[];
 }

@@ -2,9 +2,4 @@
   <ion-navbar> <ion-title> Noticias Feed </ion-title> </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card *ngFor="let article of (articles | async)">
-    <ion-card-header> {{ article.title }} </ion-card-header>
-    <ion-card-content> {{ article.description }} </ion-card-content>
-  </ion-card>
-</ion-content>
+<ion-content padding> <app-article [article]="article" *ngFor="let article of (articles | async)"></app-article> </ion-content>

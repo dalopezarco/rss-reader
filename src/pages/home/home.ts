@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { NewsProvider } from '../../providers/news/news';
-import { article } from '../../models/article.models';
+import { Article } from '../../models/article.models';
 
 @IonicPage()
 @Component({
@@ -10,7 +10,7 @@ import { article } from '../../models/article.models';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  articles: Observable<article[]>;
+  articles: Observable<Article[]>;
   constructor(public navCtrl: NavController, private newsProvider: NewsProvider) {}
 
   ionViewDidEnter() {
