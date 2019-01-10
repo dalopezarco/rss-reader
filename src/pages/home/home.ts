@@ -22,4 +22,16 @@ export class HomePage {
     console.log('test');
     this.navCtrl.push('ArticleDetailPage', { article });
   }
+
+  getItems(ev: any) {
+    this.articles = this.newsProvider.getNews();
+
+    const val = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.articles = this.articles.map((articles: Article[]) => {
+        return articles.filter(article => article.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      });
+    }
+  }
 }

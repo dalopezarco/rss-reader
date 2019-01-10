@@ -3,5 +3,6 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <app-article tappable [article]="article" *ngFor="let article of (articles | async)" (tap)="goArticleDetail(article)"></app-article>
 </ion-content>
